@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday My Love In Advance❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 420px;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    .heart {
+      font-size: 2em;
+      animation: heartbeat 1s infinite;
+      color: #e91e63;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    .confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+
+<canvas class="confetti" id="confetti-canvas"></canvas>
+
+<div class="card">
+  <div class="heart">❤️</div>
+  <h1>Happy Birthday, My Love In Advance</h1>
+  <p>On your special day, I just want to say...</p>
+  <p><strong>You are the reason my heart smiles every day. 💖</strong></p>
+  <p>May this birthday be as beautiful and unforgettable as you are to me.</p>
+  <p>I love you – more than words can ever say. 🌹</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  const canvas = document.getElementById('confetti-canvas');
+  const myConfetti = confetti.create(canvas, {
+    resize: true,
+    useWorker: true
+  });
+
+  setTimeout(() => {
+    myConfetti({
+      particleCount: 200,
+      spread: 120,
+      origin: { y: 0.6 }
+    });
+  }, 800);
+</script>
+
+</body>
+</html>
